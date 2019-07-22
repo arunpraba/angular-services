@@ -1,3 +1,17 @@
-p {
-  font-family: Lato;
+.app-inventor {
+  background: green;
+  color: white;
+  border: 1px solid green;
+}
+
+.app-emp {
+  background: rebeccapurple;
+  color: white;
+  border: 1px solid rebeccapurple;
+}
+
+.app-people {
+  background: blue;
+  color: white;
+  border: 1px solid blue;
 }
