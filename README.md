@@ -1,17 +1,19 @@
-#Services and Dependency injection
+# Services and Dependency injection
 
 Few Important concents in angular Services
 Angular Services and Dependency injection
 
-##Services
+## Services
+
 Services are the class. which contains common functions, repetative Logics
 
-##Dependency Injection
+## Dependency Injection
+
 Its a Mechanism to connect components to Service
 
 ## useClass
 
-Its a way to provide service to Module. it will create the new Instance
+Its a way to provide service to Module. It will create the new Instance
 
 providers: [
 {
@@ -22,7 +24,7 @@ useClass: PeopleService
 
 ## useExisting
 
-Its a way to update old service with newService in Module. it will overwrite old service
+Its a way to update old service wIth newService in Module. It will overwrIte old service
 
 providers: [
 InventorsService,
@@ -49,7 +51,8 @@ useValue: simpleEmployee
 },
 ]
 
-##useFactory
+## useFactory
+
 Its a way to pass the value to the service in Module.
 
 const value = new EmployeeService();
@@ -64,8 +67,9 @@ useFactory: simpleReturn
 }
 ]
 
-##@SkipSelf()
-it will skip dependency check in component level
+## @SkipSelf()
+
+It will skip dependency check in component level
 
 constructor(
 @SkipSelf()
@@ -73,8 +77,9 @@ private inventorService:InventorService) {
 this.inventor = this.inventorService.getPeople()
 }
 
-##@Host(),
-it will check dependency in component level
+## @Host(),
+
+It will check dependency in component level
 
 constructor(
 @Host()
@@ -82,8 +87,9 @@ private inventorService:InventorService) {
 this.inventor = this.inventorService.getPeople()
 }
 
-##@Optional()
-it will check dependency, if not available then it will provide `null` value
+## @Optional()
+
+It will check dependency, if not available then It will provide `null` value
 
 constructor(
 @Optional()
